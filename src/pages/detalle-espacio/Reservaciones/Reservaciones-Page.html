@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title text-center (click)="siguienteMes()" >
+       Reservaciones Programadas
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+  
+  <div class="calndar-control">
+  <div (click)="anteriorMes()">
+  
+  
+    <button ion-button style="height: 90%;;padding-top: 0px;margin-top: 0px;"> 
+        <ion-icon name="arrow-back" >
+      
+        </ion-icon>
+      </button>
+  </div>
+  <div class="animate-bottom mes">
+    <h3>{{Meses[MesSeleecionado].Mes}}</h3>
+    
+  </div>
+  <div (click)="siguienteMes()"> 
+  <button ion-button style="height: 90%;;padding-top: 0px;margin-top: 0px;"> 
+    <ion-icon name="arrow-forward">
+  
+    </ion-icon>
+  </button>
+  </div>
+  
+  </div>
+  <div  class="calendario " >
+  
+  
+  <div class="day animate-top"  *ngFor="let dia of Meses[MesSeleecionado].dias">
+  <div *ngIf="dia.reservacion==true" class="reservacion">
+  {{dia.dia}}
+  </div>
+  
+  <div *ngIf="dia.reservacion==false;" >
+      {{dia.dia}}
+      </div>
+  
+  
+  
+  </div>
+  
+  </div>
+  
+  
+  
+  
+  
+  </ion-content>
+  

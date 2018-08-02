@@ -1,1 +1,27 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Buscador</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item >
+          Lugar
+        </button>
+        <button ion-item >
+          Presupuesto
+        </button>
+        <button ion-item >
+          Limite de personas
+        </button>
+        <button ion-item >
+          Close Menu
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+
+<ion-nav #content [root]="rootPage"></ion-nav>

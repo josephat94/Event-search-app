@@ -6,11 +6,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { DetalleEspacioPage } from '../pages/detalle-espacio/detalle-espacio';
+import { SettingsPage } from '../pages/settings/settings';
+import { ModalCommentsPage } from '../pages/modal-comments/modal-comments';
+import { ReservacionesPage } from '../pages/detalle-espacio/Reservaciones/Reservaciones-page';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage, DetalleEspacioPage,SettingsPage,ModalCommentsPage, ReservacionesPage,
   ],
   imports: [
     BrowserModule,
@@ -18,8 +22,8 @@ import { HomePage } from '../pages/home/home';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage
+    MyApp,SettingsPage, ReservacionesPage,
+    HomePage, DetalleEspacioPage, ModalCommentsPage
   ],
   providers: [
     StatusBar,

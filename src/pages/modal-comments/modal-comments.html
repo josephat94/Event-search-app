@@ -1,0 +1,42 @@
+<!--
+  Generated template for the ModalCommentsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar class="nav">
+
+      <ion-buttons left > 
+          <button ion-button style="border:none;  " (click)="closeModal()">
+              <ion-icon name="close"  class="icono2"  ></ion-icon>
+            </button>
+    </ion-buttons>
+
+    <ion-title class="title">Opiniones</ion-title>
+    <ion-buttons right > 
+        <button ion-button style="border:none; width:28.56px; opacity: 0; " >
+            <ion-icon name="close"  class="icono2"  ></ion-icon>
+          </button>
+  </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list *ngFor="let comment of Comments; let i = index">
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAb1BMVEUAAAD////7+/vw8PDZ2dmcnJwODg7k5OSPj49hYWE8PDzOzs5CQkKAgIClpaX39/fBwcFsbGzCwsKvr6/s7OxQUFDMzMyVlZWgoKAgICC7u7t6enpycnIbGxsVFRULCwtcXFwvLy8+Pj5UVFRJSUnZIrAuAAAKY0lEQVR4nNVdaZeiOBSNgoLgjopSVS7V/v/fOIWKAtmTm5C5H+Z0n9MDuQJ5230vZOQcu7xalovN9Z6dzhdCLudTdr9uFuWyynfu704cXjvKi8WeSLBfFHnkcBGOCI7zyUxGrY3ZJB+7WYkLgoc00yHXIEsPDhaDJpgc7ybkGtyPCXhBUIJxerZh98Q5jZFrwhFMyqk9uyemJe45oggWRp8dH1kBWhiEYPyFZffEF+RVBRDczl3QqzHfBkCwAOwrfJyt31RLgkuX7J5YDkjQAz1rihYEKz/0alQDEMxv/vgRcss9E4y0XGkEZoYhhxnBiW96NSbeCManIfgRcjKx/AYEF8PQq7HwQDCGudQmmGo/RF2C6ZD0aqROCUbgmMEEmd52qkVwPTS5J9auCA64u3Shs9eoExw7i4r0MVdPwSkTTIYm1YVyTkOV4HZoRn2oxsKKBI9D86FxRBIMZntpQ22rUSLoPXRQwwxFUFpAGQp7DMGAzEMfcwTBALwzPjJ7gkHzU2AoIxjw+/mE7C2VEAx2f/lAstOICQZqH7oQWwshwSDtOw2hxRcRDNA/Y0PktQkIBudf8yHwvPkEA4uPxOBHT1yC46HXrAduBMwlGLwB7IJrDnkE/ycb6Ae8rZRDEJ4/m24m63j3eJHGu3g92cDzx5xcG5tghL33d8XIZUbVN/Yu7HwpmyDSw54JBFoHpKvE9ruZBIH5+XLFp1djVeLuxczqswjGsFuWYnZP4CiyKjMsgqjv/0sxPTtG6YimagRBFuJHo9IV/2DuybAVNEHQC/qlTq8G6CHSPypNEFOf1hZ+YEQpJzlBjL7AQA6Jce4ppUKfIMTEnyS2gY0V5N3pm/s+QYTlvZnQq4HQFvUTGD2COeAW9HegDMQz7GmiegQRv6HR+/nECnD7m4ggYiuzklsjdpruBt4lCL+8NhA/MZ8gQP+pad9pACx+R1/aIWh/7R9bfqMRwGvjEQQ8QIBQHuAqth9hm6D9la1f0BqAl5RNsLC/MKSDDJCwbGn1WwTt+wOU4ls57CPgM4sgIFOP4Yf4Vj65/M+i7DO9oAeIeISfPPCbIGDzsvDRugB4bO/t/E3Qfu9Skq2owT6mee/nb4LWlyTABtWD/Wr6BAE2AscP8XM3lqJZln0u+xtJ0D6r3+S5XwQBYYplGNEFIKhIOgQB2WVotz8gNVR2CNons1lZZQvAFvQkCDCCGyzBjf2K4hZBQDnJrHWKC0B6Nm0RBPThajUzyAEoMZ8/BBGpHuj4AkyFJHkTREiawKNhdoAlHd8EreZrvACeloKQ6dzfBAEXg49tQa2p/g/AtQ2T4OFFEKI5CJFg+iIIEY2ESDB7EsTI7gLcZB6LIpiSWZBm4lFKI6iidYCG/uE/EpTyPDxXjTzSRATzOYfobNeoCYKUheGFSzWiP4KYPSa8gPeB/I8gIJ/2QGgpiweKP4Io8XJoSacHFn8EUe1JgaUNn9j/EQRdKrTEb7MoIMGwUvcvjAjGJ6oRVPGlwY6ArESNkMpnDXICHB4WUAH0jYogh7+hCAKXtCTAXyscEUJrSQTapBSKjOSDBQF5tU+EIgT6YEOuyMsFIuVq4UoQSd8PwhDjtXAn4EkHIcgp28gIeoxfAILYNk4EPsF2cElzB2dyQV9yaFF6F3h6g7cVeMDNlJ+TobNOnuGArT09XPCbzAODNWf1cYabiRcGaq+jcEIb+jeGaZCkkIFdtRaGaHGlcQc72x14b1Jm4IoNl/rw3GbOwAYb8NLwOSiAhQU0ZcGEt1EPTJTQpBMPfoZ1MLFEpg1FcD9uhY0KmfgNETkwdR8kdsDiS5BAVpeCBLAAGiT2wBJ2kFgARQhBosDJSMJEjhMChYkIJ+UKE0AxXpCYAeWUQWICFMSKcJuly3WcRK8Ifxwl8XqZztyfvZUDJc0c3NNKkEJMqtRZTqjGGChKZ+A+Uco7xRNXJF+idDdHDW0qjYL9uHKSGmraCnDCqQZXgyphdYUvo2kMQVvCiaF0NELv56MRsDmrwa+VOn39C1zKpzkLNzF8by2ziHHh26e9DlXYuUOaJ2LUC/VpkES0uBJygglGD5CSV6vFFWIoUGc7P4AIUttNyvbqog26OcveMLbbzK3bFIBy5ga21rkzKMCywgPuemlg9xC7ox6s9lFwX9YHVh1a3WEdFg73Ddry0kVkHlH1xq2Yb1vQfhAaxhWo/sAcU3/U8qxxOUzLe29ezR/M6uQOds8+zHZTemiVkSm0UhaqwmgDpMeOmQyOAzcm82BQ4WMMjtMf/XeBdbrIsNIW1LFG/+l63P746TNkDm/UtRQe+WkrZdnjN/Ushafvr4Hed9gm1fqzjsnxsn+2obOX8kbgajxCD/avDw172OHU/ovyI3Tuv7BgtjqjQeKO/U8eVP3SLqXO39RkTzd/nLpQiy1Eo+DVLuEwPhJDqRh96/4/BscxOItv5VCJgMXHMSiUex3lJ9Qgz2JIDtRQeAt8cWFDujzZkSjSgvYAFrANmTWUHmoj6x8a9AWtIX5JFY4lkkS+4PyuPsQFd5WDpYTiNWh+3gyioEfpaDBRmtuicw4H/jekeLib4CUdeId5gr/PqB7Pxy023R0vXRG8+qHyAYvcPDd4OJwpOG+YxhGZHHMvORjdH9hVbp1DTtlOXyAPkPMItY6pZdqKX2cL1gZDi6F50DArDzxgFNEH/YJpHxVNewyAMRU4UA2V+od9U2msn8HiXBpRn6DBce2MXL7nVCgfVJJ0y/+3ovCOEkAFso1Sm+hR8I+F8Su1lYbpqvE20AfEATqVwAgxmhAPrJNkICifgenv+QTlJ0v8K1mKhTKHV9hSjXDtr4drAF+Q5pAov/tnwM10R9k/tofdgjxJRkcWg7k0tAMj5adAkOG0Cbctd6D9Y9n7OVIiyIhObgO8pju6rKASvynlcRnpbu8FNEbxTGmgqVqimhE8zb26phFD5KL2oShm4lmydZGDBIbF7VVLDSwVzc2TbxqzinoC/7oD5VoKUwTw7UFLsmIWdpVFEOrFojFT6wWe4U+DWQyaq1cQdKph7Jy+U/+bnafXscNa5T52gXXqjGLBLiJoeVJ69cyInRG+OKFYsAVqmZ590i3Y8rL6stFGuuCOQtKN17Qr0jGv9vQNNBoxTxIz1b6JQcmdWz88LSGPcbXkFsgMvHwTTUHMr9CZtH52IWgEPZm8I2aiCZFS4VoYe6lRwWdnanINVSGRUE+Tlbn8En3kpbA5ZWb4sxnLXnKJ6mtfHpS/yNWhlPR93gx+sScsdD1y5d50M9lKnMZkqzKBzOLLthIuqSk4p/++ymKbJ7tVM+phtUvybVF+/VPr6rMKri2VWR7m6lnmDqylZ4WbGbovnK2dQIC2bmvQM6OGuWpU65bgn+V3MgH1C+L7odSRBXikSYYKUHDyz6SEDZyclri2DKi+NU4BO845heay0ALe5Gg1qOF+RLfUuFAoH1KjDzJLXRSQHUmwx/lEa5rZbJI7ktq61JhHebGQDk/ZL4rcZRXAg4h+l1fLcrG53rPT+ULI5XzK7tfNolxWuYci1X+D3pjXasJivgAAAABJRU5ErkJggg==">
+          </ion-avatar>
+          <h2>{{comment.usuario}}</h2>
+          <h3>{{comment.comentario}}</h3>
+          <p>{{comment.fecha}}</p>
+        </ion-item>
+      </ion-list>
+
+
+</ion-content>
